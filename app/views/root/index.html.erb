@@ -1,0 +1,13 @@
+<script type="text/javascript" id="bootstrap_gists">
+  <%= render('gists.json.rabl', :gists => @gists).html_safe %>
+</script>
+
+<script type="text/javascript" id="bootstrap_favorites">
+  <%= render('favorites.json.rabl', :favorites => @favorites).html_safe %>
+</script>
+
+<script type="text/javascript" id="bootstrap_current_user_id"
+				data="<%= current_user.id %>">
+</script>
+
+<div id="container"></div>
