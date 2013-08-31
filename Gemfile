@@ -17,3 +17,7 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'backbone-on-rails'
 gem 'rabl'
+
+gem 'quiet_assets', :group => :development
+gem 'thin'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'

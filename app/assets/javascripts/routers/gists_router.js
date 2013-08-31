@@ -7,7 +7,8 @@ GistProject.Routers.Gists = Backbone.Router.extend({
 	},
 
 	routes: {
-		"" : "index",
+		""          : "index",
+		"gists/new" : "new",
 		"gists/:id" : "detail"
 	},
 
@@ -32,6 +33,13 @@ GistProject.Routers.Gists = Backbone.Router.extend({
 
 		});
 		$('#container').html(gistDetailView.render().$el);
+	},
+
+	new: function() {
+		var gistFormView = new GistProject.Views.GistsForm({
+			collection: this.gists
+		});
+		$('#container').html(gistFormView.render().$el);
 	}
 
 });

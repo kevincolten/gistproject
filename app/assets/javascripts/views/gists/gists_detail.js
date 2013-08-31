@@ -6,11 +6,14 @@ GistProject.Views.GistDetail = Backbone.View.extend({
 		this.listenTo(this.collection,"add", renderCallback);
 		this.listenTo(this.collection,"change", renderCallback);
 		this.listenTo(this.collection,"remove", renderCallback);
+		this.gistFile = new GistProject.Models.GistFile(this.model.get('gist_file'));
+		console.log(this.gistFile);
 	},
 
 	render: function () {
-		console.log("rendering");
-		this.$el.html(this.template({ gist: this.model, favorite: this.favorite}));
+		this.$el.html(this.template({ gist: this.model,
+																	favorite: this.favorite,
+																	gistFile: this.gistFile}));
 		return this;
 	},
 

@@ -5,4 +5,6 @@ class Gist < ActiveRecord::Base
 
   has_many :favorites
 
+  has_one :gist_file
+
 end

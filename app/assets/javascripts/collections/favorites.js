@@ -1,5 +1,5 @@
-GistProject.Collections.Favorites = Backbone.Collection.extend({
+GistProject.Collections.GistFiles = Backbone.Collection.extend({
 
-  model: GistProject.Models.Favorite
+  model: GistProject.Models.GistFile
 
 });
